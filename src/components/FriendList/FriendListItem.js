@@ -3,11 +3,11 @@ import css from "./FriendList.module.css";
 
 export const FriendListItem = ({ friend: { avatar, name, isOnline } }) => {
     return (
-        <>
-            {isOnline ? <span className={css.isOnline}></span> : <span className={css.isOffline}></span>}
-            <img className={css.avatar} src={avatar} alt={name} width="70" />
-            <p className={css.name}>{name}</p>
-        </>
+      <>
+        <span className={isOnline ? css.isOnline : css.isOffline}></span>
+        <img className={css.avatar} src={avatar} alt={name} width="70" />
+        <p className={css.name}>{name}</p>
+      </>
     );
 }
 
